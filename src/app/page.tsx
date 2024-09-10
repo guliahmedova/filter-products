@@ -142,8 +142,6 @@ export default function Home() {
     ? productsByCategory?.products
     : products?.products;
 
-  console.log(category);
-
   return (
     <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="flex items-baseline justify-between border-b border-gray-200 pb-5 pt-24">

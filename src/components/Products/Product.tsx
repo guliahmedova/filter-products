@@ -9,6 +9,7 @@ const Product = ({ product }: { product: Product }) => {
           width={300}
           height={300}
           quality={100}
+          priority
           alt={product.title}
           src={product.images[0]}
           className="size-full object-contain object-center"

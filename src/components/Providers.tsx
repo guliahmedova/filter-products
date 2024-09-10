@@ -4,7 +4,7 @@ import { PropsWithChildren } from "react";
 
 const client = new QueryClient(); // this is for to track our data (catch)
 
-const Providers = ({ children }: PropsWithChildren<{}>) => {
+const Providers = ({ children }: PropsWithChildren<any>) => {
   return <QueryClientProvider client={client}>{children}</QueryClientProvider>;
 };
 
