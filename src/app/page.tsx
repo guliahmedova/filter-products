@@ -99,6 +99,7 @@ export default function Home() {
 
       if (filter.sortBy) {
         params.sortBy = filter.sortBy;
+        params.order = "";
       }
       if (filter.sort) {
         params.sortBy = "price";
@@ -134,6 +135,7 @@ export default function Home() {
   }) => {
     setFilter((prevState) => ({
       ...prevState,
+      sort: "",
       [category]: value,
     }));
   };
@@ -141,6 +143,8 @@ export default function Home() {
   const displayProducts = category
     ? productsByCategory?.products
     : products?.products;
+
+  console.log("filter: ", filter);
 
   return (
     <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -167,6 +171,7 @@ export default function Home() {
                   onClick={() =>
                     setFilter((prevState) => ({
                       ...prevState,
+                      sortBy: "",
                       sort: option.value,
                     }))
                   }
